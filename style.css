@@ -1,0 +1,317 @@
+/*BODY*/
+body {
+	margin: 0;
+	font-family: Arial Black, sans-serif;
+	background: black;
+	color: white;
+}
+
+/*HEADER*/
+header {
+	background: white;
+	color: black;
+	text-align: center;
+	padding: 20px 0;
+}
+
+/*NAVIGATION*/
+nav a {
+	text-decoration: none;
+	color: black;
+	padding: 10px 16px;
+	border-radius: 5px;
+	margin: 0 5px;
+	font-weight: bold;
+}
+
+nav a:hover {
+	text-decoration: underline;
+	background: gray;
+	color: white;
+}
+
+/*MAIN*/
+main {
+	max-width: 900px;
+	margin: 20px auto;
+	padding: 0 15px;
+}
+
+/*INTRO*/
+.intro h2 {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.intro p {
+	text-align: center;
+	font-size: 18px;
+}
+
+/*SPOTS GRID*/
+.spots {
+	display: flex;
+	flex-direction: column;
+	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+	gap: 20px;
+}
+
+body.home .spots {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.spot {
+	min-height: 150px;
+	padding: 15px;
+	background-size: cover;
+	background-position: center;
+	color: white;
+	position: relative;
+}
+
+.spot::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.35);
+	border-radius: 10px;
+}
+
+.spot * {
+	position: relative;
+	z-index: 1;
+}
+
+/*SPOT IMAGES*/
+.spot:nth-child(1) {
+	background-image: url("https://simbyahero.com/wp-content/uploads/2024/04/Samar-Catbalogan-St-Bartholomew-the-Apostle-Parish-Church-1600-03.jpg")
+}
+
+.spot:nth-child(2) {
+	background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/0f/4c/01/m-grand-royale-resort.jpg?w=2000&h=-1&s=1")
+}
+
+.spot:nth-child(3) {
+	background-image: url("https://preview.redd.it/buri-baras-beach-catbalogan-v0-dscvddxd8hbb1.jpg?width=1080&crop=smart&auto=webp&s=1a37773696dbbde0e2e0ac2a7e4e5dc8379203f1")
+}
+
+.spot:nth-child(4) {
+	background-image: url("https://scontent.fceb1-4.fna.fbcdn.net/v/t1.6435-9/51200802_2157446567850983_7941052354554494976_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cf85f3&_nc_eui2=AeFrBGmuubhQqkKfdBh3GUXzY0u6kM69VZBjS7qQzr1VkLQSRgvhL0NgDheGIHVjE2pIqOsOofS2Ek1xU8qp8lbb&_nc_ohc=vMedEgy8K8EQ7kNvwGo2l6v&_nc_oc=AdmVc0vaOdwpujHVuhyIvPJvHMSjeI0HlFRqMhglpVerkqeBOqfOHZ8zlZoOrPte6AKlwCH-st4CuInzGDpWvc0Q&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=91ycANO7_6VcjrKa0ahASA&oh=00_AflFNfB_jqAgpXyhqGM39bNzAYhnwWscI4bbPT8QA0Joeg&oe=695647ED")
+}
+
+.spot:nth-child(5) {
+	background-image: url("https://scontent.fceb1-3.fna.fbcdn.net/v/t39.30808-6/469346770_1117365783295381_4550928365689993644_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=s984_ARtw0sQ7kNvwHRIqnc&_nc_oc=AdlgFp0kI40RBBw94aRZU2QYCFTTk7Zhw7jv1CGO8a1rWzyf_Q4jar6VWXiqPheZsJnwePIrCMV8aNpluzneyAwZ&_nc_zt=23&_nc_ht=scontent.fceb1-3.fna&_nc_gid=IOhaNnRxH4jsieE8VgkFFw&oh=00_AfmPlgLY9e3y3ll5QaEV7aQvY9O6GYI5de-MJIiSwyfgog&oe=693DFD49")
+}
+
+.spot:nth-child(6) {
+	background-image: url("https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/480942823_122213536640211329_4914664266518784063_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=zig_JmqNoIUQ7kNvwEIGGCR&_nc_oc=AdlsjRyaNgYwmMEViL1JltGmn1SBXLBGlbWZZMUHRSxyUv1t780inYuwAU1fwL4HvWjcvo-8GdATfEvA7CtfttlT&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=o0rlVx-rX0n1vnPVNRK4cA&oh=00_Afmr1Gl4N8bIwST7Xuc6mrveTTGAjg1Tf0izMLpGV4YhHA&oe=693DE727")
+}
+
+.spot:nth-child(7) {
+	background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2Igosd6qDvDjnzTffQRsSN3XutLaCBLJW35F5QP0EGrlNdaZ-bIDd_55jMLZmlZeVeSqXG2oM5NRu4WRO78riK_GWTtsfWXf2ONMYppfEZEtvsRtcVQnCq1OvVaPbWzbb36ZOHUSkc7M/s1600/DSC_0144.JPG")
+}
+
+.spot:nth-child(8) {
+	background-image: url("https://q-xx.bstatic.com/xdata/images/hotel/max500/595610721.jpg?k=e2961147642f0cae4325e0c7321dd9e6219e0da2cb760fa41f1b982febf6808b&o=")
+}
+
+.spot:nth-child(9) {
+	background-image: url("https://scontent.fceb1-2.fna.fbcdn.net/v/t39.30808-6/486806514_1154110590083805_7717621413420875802_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEfIgqlb5ADvMhFOQOEi144ne6snpHOqdad7qyekc6p1mwyjW0BFOH9mS_h2TVnjGYwtYMHeEQwd61CFij5uEBH&_nc_ohc=pc8kukCK_CoQ7kNvwEV9Gxj&_nc_oc=Admn69XxdKd2Y54tK9nt1ovey1DkJsMSY60qUFjaUFrGLTvHKpsDAulukD9l0xFRtJZYhqHonuKkP4xba4AlUmFY&_nc_zt=23&_nc_ht=scontent.fceb1-2.fna&_nc_gid=ZPMZt6Zo9u5Hm6zjVsLyYw&oh=00_AfkmPQzx1ZX9ah0O0BgJrEub3BlLFAC2DVJ7U3L4KM6Niw&oe=693DEB4A")
+}
+
+.spot:nth-child(10) {
+	background-image: url("https://scontent.fceb1-2.fna.fbcdn.net/v/t39.30808-6/481146188_1180084653479592_4893498416844057489_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFl04-H4ubNaLqzmcWi537SoSZQu6RaEBChJlC7pFoQELWuIpZeEwlP3grC1EpAhWODYl_d7owjF8CoBhbsm5dH&_nc_ohc=0D6-H6AbE4oQ7kNvwEg2YjA&_nc_oc=Admw09Ow4HbtDQGOa9aduCK--sWJyl9fM6ltj9Y42vVfCu-_z_zIzuRswNq2wRqwwG7CpDpT97HR0Hdq_C8arWfq&_nc_zt=23&_nc_ht=scontent.fceb1-2.fna&_nc_gid=Q4Lr0SULas2fVlsJ6MoMbg&oh=00_AfkGHciQzbv-nHkkJ3dvE2uTsc-wYfi5uetPUswPSYQC6Q&oe=693DF3A3")
+}
+
+.spot:nth-child(11) {
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4c/Samar_Provincial_Capitol_%28Rizal_Avenue%2C_Catbalogan%2C_Samar%3B_04-27-2023%29.jpg")
+}
+
+.spot:nth-child(12) {
+	background-image: url("https://scontent.fcgy2-1.fna.fbcdn.net/v/t39.30808-6/577810223_122127515690961556_4210331223937515272_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGi_3WMffsxyRtUjiCwfF5WcwcWJsiSJ3JzBxYmyJInchDUyLfFifK0neVqT3IytkqStAVr64ZJfvEhXdFTMHgI&_nc_ohc=nu6_RCpQKjIQ7kNvwFrSGC5&_nc_oc=AdnGj4R_IJNc9mUu6Li_p50w4mzwJJwxRaToAPsb11JazlzuEwN1Hh9brnRfgrdyrXsC7DFiXdtf9B_qQLDYOBbj&_nc_zt=23&_nc_ht=scontent.fcgy2-1.fna&_nc_gid=A8rOz7oQuK_K4x7RsgjigA&oh=00_AfkEcnGD7OV2iEwYGiBlZkcNEr25_7wsVl0i6T9hhqiwJw&oe=693E1C96")
+}
+
+.spot:nth-child(13) {
+	background-image: url("https://scontent.fcgy2-1.fna.fbcdn.net/v/t39.30808-6/486524456_1229210432539964_5052756293813269869_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEB9xYo31YS-2EFspSe5yM2ZhbUnnaFvipmFtSedoW-KqaYwJ0QEyvITtYq-xfDIdvAPYu05h0WTbmeL-qzjtxd&_nc_ohc=whx5uyHEPtQQ7kNvwHkRXc0&_nc_oc=Adncw68Ru_eFhp8ciPKsdR4iW0QhqhbPS-GKuDQ0GXDq0vFj0FEQZTVu8DeD2rgR7ao&_nc_zt=23&_nc_ht=scontent.fcgy2-1.fna&_nc_gid=-nkbS80pqmEMH2k1ANlnBQ&oh=00_AflIpCKD5Oz0ONix1_UiVrIJg4wkACNtEh--XUfe-syqIg&oe=693E0E7E")
+}
+
+.spot:nth-child(14) {
+	background-image: url("https://upload.wikimedia.org/wikipedia/en/7/7c/Catbalogan_City_Plaza_%28Rizal_Avenue%2C_Catbalogan%2C_Samar%3B_04-27-2023%29.jpg")
+}
+
+.spot:nth-child(15) {
+	background-image: url("https://scontent.fcgy2-2.fna.fbcdn.net/v/t39.30808-6/473335931_578635171574325_5524371633327916379_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGM8ZYDOn-pluecmzNjlFWSrCQbkGHWy5isJBuQYdbLmH8vPqrTcgw86CvzAG-He-mOGR1cF2GyOpPPlwE7mEJf&_nc_ohc=soBz_0GcyrwQ7kNvwE00Vi-&_nc_oc=AdnIY7ToU7IUbYh2TKDawNKQa2gOag9JmQ0DqWBWO_IKXruHbIF9QIQ51ASikeswewDaoU7XyzdowrqXg0xFUsDA&_nc_zt=23&_nc_ht=scontent.fcgy2-2.fna&_nc_gid=qM5CuJIH_3l_iKe3U7RgNg&oh=00_AfllctUICS0YS1RExBbNLtwGlA0cazA0F7seRB2U-BmJcA&oe=693E0E86")
+}
+
+.spot:nth-child(16) {
+	background-image: url("https://faq.ph/wp-content/uploads/2015/08/The-Pieta-Catbalogan.jpg")
+}
+
+.spot:nth-child(17) {
+	background-image: url("https://scontent.fceb1-3.fna.fbcdn.net/v/t39.30808-6/480579915_559004940479160_1133541289848947288_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGwYniM3JcyeGv1x7FFNcbQye18x4VB5trJ7XzHhUHm2g4Ovl6O_8FrZEVT_PhSCfdHG7oE5HDXSlAiTUUALQ5G&_nc_ohc=Z7W3Hm7XSnYQ7kNvwFTPKOB&_nc_oc=AdnbgJTnsmUuKao0EW3VgqsfGKdEXVOkwlnwRlE6LMeQAoc2sD4Qu3o5DlLuZX7sSbvksblrgJO-NBfjs--g5Di9&_nc_zt=23&_nc_ht=scontent.fceb1-3.fna&_nc_gid=LvNfmhKo9j5cDTX2SnV2DA&oh=00_AfmzNceowOO5iZIWQexHNezIKRD6WQR48af6l5MgQPJy5g&oe=693F51D6")
+}
+
+.spot:nth-child(18) {
+	background-image: url("https://scontent.fceb1-1.fna.fbcdn.net/v/t39.30808-6/475970602_634979865711841_3578489761697364215_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEiM4LHXBXXjVMENfsCfnxCggEaqVZSvGKCARqpVlK8YigNJiwNjS5Ll2rXo-k03a0i-uxLP0WLKZBRIr5dQf9M&_nc_ohc=CXwCqcngvSsQ7kNvwGlLHGE&_nc_oc=Admf9yd24z0ON0khz-FuFyRP1T13ftOrEzmKEJiuXwf3vtn-Ukkd7LFxX80Ac9pk_t8fDAfYFDU3KpErtASpMyKZ&_nc_zt=23&_nc_ht=scontent.fceb1-1.fna&_nc_gid=zLN4fw-JJ0HdFhaLzjHxgQ&oh=00_AfkqHBo_3OfxEbmeU-eZtkfK8g2hhFi3tosmzxKVgx77Tw&oe=6940BF0A")
+}
+
+/*BUTTONS*/
+.btn {
+	display: inline-block;
+	background: white;
+	color: black;
+	padding: 8px 12px;
+	text-decoration: none;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px gray;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.btn:hover {
+	background: gray;
+	color: white;
+}
+
+/*PHOTOS GRID*/
+.photos{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 15px;
+}
+
+.photo-item {
+	height: 200px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.photo-item img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+	display: block;
+}
+
+.photo-item span {
+	margin-top: 6px;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	padding: 3px 6px;
+	border-radius: 6px;
+	display: block;
+}
+
+/*DETAILS BOX*/
+.details {
+	background: transparent;
+	padding: 15px;
+	border-radius: 0;
+	box-shadow: none;
+	text-align: center;
+	color: white;
+	align-items: center;
+}
+
+.details a {
+	display: inline-block;
+	background: white;
+	color: black;
+	padding: 8px 12px;
+	text-decoration: none;
+	border-radius: 5px;
+	box-shadow: none;
+	margin-right: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.details a:hover {
+	background: gray;
+	color: white;
+}
+
+.details p {
+	font-family: 'Georgia', serif;
+	font-size: 15px;
+	line-height: 1.8;
+	text-align: justify;
+	text-indent: 50px;
+	margin: 20px 0 20px 0;
+}
+
+/*IMAGES SECTION*/
+.images {
+	background: transparent;
+	box-shadow: none;
+	border-radius: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px
+}
+
+.images img {
+	width: 100%;
+	max-width: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+/*FOOTER*/
+footer {
+	color: white;
+	text-align: center;
+	padding: 15px 0;
+}
+
+/*MOBILE/RESPONSIVE*/
+@media screen and (max-width: 768px) {
+	.intro h2 {
+		font-size: 18px;
+	}
+	.intro p {
+		font-size: 16px;
+	}
+	.spots {
+		grid-template-columns: 1fr;
+	}
+	.photos {
+		grid-template-columns: 1fr;
+	}
+	.details p {
+		text-indent: 30px;
+		font-size: 14px;
+	}
+	
+@media screen and (max-width: 480px) {
+	nav a {
+		padding: 8px 10px;
+		margin: 3px;
+		font-size: 14px;
+		display: block;
+		text-align: center;
+	}
+	.intro h2 {
+		font-size: 16px;
+		}
+	.intro p {
+		font-size: 14px;
+	}
+	.details p {
+		text-indent: 20px;
+		font-size: 13px;
+	}
+}
+	
